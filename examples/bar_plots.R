@@ -1,12 +1,21 @@
 library(ggplot2)
+library(grid)
+library(gridExtra)
 
 plot_data <- data.frame(
-  category = LETTERS[1:5],
-  value = c(4, 5, 2, 3, 2)
+  Language = c("French", "German", "Italian", "Spanish", "Swedish"),
+  Estimate = c(4, 5, 2, 3, 2)
 )
-p <- ggplot(plot_data, aes(x = category, y = value)) +
+
+p_default <- ggplot(plot_data, aes(x = Language, y = Estimate)) +
   geom_bar(stat = "identity") +
   scale_y_continuous(expand = c(0, 0))
-p + bar_theme(16)
-p + coord_flip() + bar_theme(16, orientation="horizontal")
+
+grid.arrange(
+  p_default,
+  p_default + bar_theme(),
+  p_default + coord_flip(),
+  p_default + coord_flip() + bar_theme(orientation = "horizontal"),
+  nrow = 2, ncol = 2
+)
 
