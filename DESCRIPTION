@@ -1,0 +1,24 @@
+Encoding: UTF-8
+Package: treesmapstheorems
+Type: Package
+Title: ggplot themes following the principles in Trees, Maps, and Theorems
+Version: 1.0.0
+Date: 2016-12-18
+Authors@R: 
+    person("Christofer", "Backlin", role = c("aut", "cre"), email = "cran@christofer.backlin.se")
+Author: Christofer Backlin [aut, cre]
+Maintainer: Christofer Backlin <cran@christofer.backlin.se>
+Description: The book "Trees, maps, and theorems -- Effective communication for
+    rational minds" by Jean-luc Doumont offers overall guidelines and practical
+    tips toward getting messages across optimally in written documents, oral
+    presentations, and graphical displays (quote from its webpage).
+    This package implements some of its guidelines as themes for ggplot.
+Imports:
+    ggplot2,
+    grid
+License: GPL (>= 2)
+LazyLoad: yes
+LazyData: yes
+URL: https://github.com/backlin/treesmapstheorems
+BugReports: https://github.com/backlin/treesmapstheorems/issues
+RoxygenNote: 5.0.1
