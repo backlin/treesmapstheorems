@@ -2,7 +2,7 @@ Encoding: UTF-8
 Package: treesmapstheorems
 Type: Package
 Title: ggplot themes following the principles in Trees, Maps, and Theorems
-Version: 1.0.0.9000
+Version: 1.0.1
 Date: 2016-12-18
 Authors@R: 
     person("Christofer", "Backlin", role = c("aut", "cre"), email = "cran@christofer.backlin.se")
