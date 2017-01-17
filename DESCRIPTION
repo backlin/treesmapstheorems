@@ -2,8 +2,8 @@ Encoding: UTF-8
 Package: treesmapstheorems
 Type: Package
 Title: ggplot themes following the principles in Trees, Maps, and Theorems
-Version: 1.0.1
-Date: 2016-12-18
+Version: 1.0.2
+Date: 2017-01-17
 Authors@R: 
     person("Christofer", "Backlin", role = c("aut", "cre"), email = "cran@christofer.backlin.se")
 Author: Christofer Backlin [aut, cre]
@@ -14,6 +14,8 @@ Description: The book "Trees, maps, and theorems -- Effective communication for
     presentations, and graphical displays (quote from its webpage).
     This package implements some of its guidelines as themes for ggplot.
 Imports:
+    assertthat,
+    dplyr,
     ggplot2,
     grid
 Suggests:

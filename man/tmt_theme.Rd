@@ -4,8 +4,9 @@
 \alias{tmt_theme}
 \title{Create trees-maps-and-theorems theme}
 \usage{
-tmt_theme(base_size, axis.line, axis.text, axis.ticks, axis.title, panel.border,
-  panel.grid)
+tmt_theme(base_size = 10, axis.line = "", axis.text = "",
+  axis.ticks = "", axis.title = "", panel.border = FALSE,
+  panel.grid = "")
 }
 \arguments{
 \item{base_size}{Sent to \code{\link{theme_bw}}.}
