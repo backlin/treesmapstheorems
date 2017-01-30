@@ -1,0 +1,5 @@
+library(assertthat)
+library(devtools)
+library(ggplot2)
+for(f in dir("R", full.names = TRUE))
+  tryCatch(source(f), error = function(err) print(err))

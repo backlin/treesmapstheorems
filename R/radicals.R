@@ -1,8 +1,8 @@
-xy_attribute <- function(side="xy", values=list(major=main_colour, minor=light_colour)){
+xy_attribute <- function(side="xy"){
   stopifnot(tolower(side) %in% c("x", "y", "xy"))
   sides <- strsplit(side, "")[[1]]
   structure(
-    lapply(sides, function(s) if(s %in% LETTERS) values$major else values$minor),
+    lapply(sides, function(s) if(s %in% LETTERS) colour("annotation_dark") else colour("annotation_light")),
     names = tolower(sides),
     class = "xy_attribute"
   )
@@ -47,27 +47,27 @@ tmt_axis <- function(line = "", text = "Xy", ticks = "xy", title="Y"){
     "axis.text",
     ggplot2::element_text,
     text,
-    colour = xy_attribute(text, list(major=main_colour, minor=pale_colour))
+    colour = xy_attribute(text)
   )
   line_elements <- make_xy_element_pair(
     "axis.line",
     ggplot2::element_line,
     line,
-    colour = light_colour,
+    colour = colour("annotation_light"),
     size = thin_line_size
   )
   ticks_elements <- make_xy_element_pair(
     "axis.ticks",
     ggplot2::element_line,
     ticks,
-    colour = light_colour,
+    colour = colour("annotation_light"),
     size = thin_line_size
   )
   title_elements <- make_xy_element_pair(
     "axis.title",
     ggplot2::element_text,
     title,
-    colour = xy_attribute(title, list(major=main_colour, minor=light_colour)),
+    colour = xy_attribute(title),
     angle = 0,
     vjust = .5
   )
@@ -79,8 +79,7 @@ tmt_axis <- function(line = "", text = "Xy", ticks = "xy", title="Y"){
 tmt_panel <- function(border=TRUE, grid="xy"){
   requireNamespace("ggplot2")
   border_elements <- if(border){
-    box_colour <- if(grid == "") faint_colour else light_colour
-    list(panel.border = ggplot2::element_rect(colour = box_colour, size = thin_line_size))
+    list(panel.border = ggplot2::element_rect(colour = colour("annotation_light"), size = thin_line_size))
   } else {
     list(panel.border = ggplot2::element_blank())
   }

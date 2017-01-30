@@ -15,7 +15,8 @@
 #' @importFrom ggplot2 theme theme_bw
 #' @importFrom grid unit
 #' @export
-tmt_theme <- function(base_size, axis.line, axis.text, axis.ticks, axis.title, panel.border, panel.grid){
+tmt_theme <- function(base_size=12, axis.line="xy", axis.text="xy", axis.ticks="xy",
+                      axis.title="XY", panel.border=FALSE, panel.grid=""){
   axes <- tmt_axis(line = axis.line, text = axis.text, ticks = axis.ticks, title = axis.title)
   panel <- tmt_panel(border = panel.border, grid = panel.grid)
   return(
