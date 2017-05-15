@@ -6,7 +6,7 @@
 \usage{
 tmt_theme(base_size = 10, axis.line = "", axis.text = "",
   axis.ticks = "", axis.title = "", panel.border = FALSE,
-  panel.grid = "")
+  panel.grid = "", ...)
 }
 \arguments{
 \item{base_size}{Sent to \code{\link{theme_bw}}.}
@@ -22,6 +22,8 @@ tmt_theme(base_size = 10, axis.line = "", axis.text = "",
 \item{panel.border}{Box surrounding each panel (logical).}
 
 \item{panel.grid}{Grid lines (xy-string). Only major grid lines are ever used.}
+
+\item{...}{Sent to \code{\link{theme_bw}}.}
 }
 \description{
 This function provides the lowest level entry point to the tmt-engine
