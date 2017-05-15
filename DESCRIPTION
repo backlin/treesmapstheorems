@@ -25,4 +25,4 @@ LazyLoad: yes
 LazyData: yes
 URL: https://github.com/backlin/treesmapstheorems
 BugReports: https://github.com/backlin/treesmapstheorems/issues
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1
