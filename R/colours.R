@@ -1,20 +1,51 @@
-#' Colours used by trees, maps, and theorems
-#' 
+col2hex <- function(x){
+  do.call(rgb, as.data.frame(t(col2rgb(x))/255))
+}
+
+#' Colours and palettes
+#'
+#' @param name Name of colour.
+#' @param palette Named character vector. See  
+#' @author Christofer \enc{Bäcklin}{Backlin}
+#' @rdname colour
 #' @export
-#' @rdname colours
-emphasis_colour <- "orange"
+colour <- function(name, palette = get_palette()){
+  validate_palette(palette)
+  palette[name]
+}
+
+#' @rdname colour
 #' @export
-#' @rdname colours
-main_colour <- "grey30"
+default_palette <- c(
+  highlight = "orange",
+  data_dark = "dodgerblue4",
+  data_light ="steelblue2",
+  annotation_dark = "grey60",
+  annotation_light = "grey80"
+)
+
+#' @rdname colour
 #' @export
-#' @rdname colours
-pale_colour <- "grey60"
+get_palette <- function(){
+  getOption("treesmapstheoroms_palette", default_palette)
+}
+
+#' @rdname colour
 #' @export
-#' @rdname colours
-light_colour <- "grey75"
+validate_palette <- function(palette){
+  assert_that(
+    is.character(palette),
+    is.character(col2hex(palette)),
+    all(names(default_palette) %in% names(palette))
+  )
+}
+
+#' @rdname colour
 #' @export
-#' @rdname colours
-faint_colour <- "grey90"
+set_palette <- function(palette){
+  validate_palette(palette)
+  options(treesmapstheorems_palette = palette)
+}
 
 thin_line_size <- .3
 medium_line_size <- 1

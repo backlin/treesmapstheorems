@@ -10,21 +10,24 @@
 #' @param axis.title Axis titles (xy-string).
 #' @param panel.border Box surrounding each panel (logical).
 #' @param panel.grid Grid lines (xy-string). Only major grid lines are ever used.
+#' @param ... Sent to \code{\link{theme_bw}}.
 #' @seealso \code{\link{bar_theme}}, \code{\link{line_theme}}.
 #' @author Christofer \enc{Bäcklin}{Backlin}
-#' @importFrom ggplot2 theme theme_bw
+#' @importFrom ggplot2 theme theme_bw element_blank element_text
 #' @importFrom grid unit
 #' @export
-tmt_theme <- function(base_size=10, axis.line="", axis.text="", axis.ticks="",
-                      axis.title="", panel.border=FALSE, panel.grid=""){
+tmt_theme <- function(base_size=10, axis.line="xy", axis.text="xy", axis.ticks="xy",
+                      axis.title="XY", panel.border=FALSE, panel.grid="", ...){
   axes <- tmt_axis(line = axis.line, text = axis.text, ticks = axis.ticks, title = axis.title)
   panel <- tmt_panel(border = panel.border, grid = panel.grid)
   return(
-    ggplot2::theme_bw(base_size = base_size) +
+    theme_bw(base_size = base_size) +
     theme(
-      legend.key.size = grid::unit(3, "mm")
+      legend.key.size = grid::unit(3, "mm"),
+      strip.background = element_blank(),
+      strip.text = element_text(margin = unit(c(4, 1, 1, 1), "mm"), colour = main_colour)
     ) +
-    do.call(ggplot2::theme, c(axes, panel))
+    do.call(ggplot2::theme, c(axes, panel, list(...)))
   )
 }
 

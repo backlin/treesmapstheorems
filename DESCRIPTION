@@ -2,8 +2,8 @@ Encoding: UTF-8
 Package: treesmapstheorems
 Type: Package
 Title: ggplot themes following the principles in Trees, Maps, and Theorems
-Version: 1.0.2
-Date: 2017-01-17
+Version: 1.0.3
+Date: 2017-05-48
 Authors@R: 
     person("Christofer", "Backlin", role = c("aut", "cre"), email = "cran@christofer.backlin.se")
 Author: Christofer Backlin [aut, cre]
@@ -25,4 +25,4 @@ LazyLoad: yes
 LazyData: yes
 URL: https://github.com/backlin/treesmapstheorems
 BugReports: https://github.com/backlin/treesmapstheorems/issues
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1

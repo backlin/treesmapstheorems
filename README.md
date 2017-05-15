@@ -7,6 +7,13 @@ An R package with themes for `ggplot2` following the principles in
 lot of manual styling to look clean and clutter free.
 This package provides a collection of themes that take care of that for you.
 
+Installation
+------------
+```
+library(devtools)
+install_github("backlin/treesmapstheorems")
+```
+
 Examples
 --------
 The current package comes with these four standard themes out of the box.
