@@ -25,4 +25,3 @@ Sets a few default values for \code{\link{ggsave}}.
 \author{
 Christofer \enc{Bäcklin}{Backlin}
 }
-

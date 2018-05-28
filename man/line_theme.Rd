@@ -44,10 +44,9 @@ grid.arrange(
   nrow = 2, ncol = 2
 )
 }
-\author{
-Christofer \enc{Bäcklin}{Backlin}
-}
 \seealso{
 \code{\link{bar_theme}}.
 }
-
+\author{
+Christofer \enc{Bäcklin}{Backlin}
+}

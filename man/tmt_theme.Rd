@@ -4,8 +4,8 @@
 \alias{tmt_theme}
 \title{Create trees-maps-and-theorems theme}
 \usage{
-tmt_theme(base_size = 10, axis.line = "", axis.text = "",
-  axis.ticks = "", axis.title = "", panel.border = FALSE,
+tmt_theme(base_size = 10, axis.line = "xy", axis.text = "xy",
+  axis.ticks = "xy", axis.title = "XY", panel.border = FALSE,
   panel.grid = "", ...)
 }
 \arguments{
@@ -29,10 +29,9 @@ tmt_theme(base_size = 10, axis.line = "", axis.text = "",
 This function provides the lowest level entry point to the tmt-engine
 intended for the end user.
 }
-\author{
-Christofer \enc{Bäcklin}{Backlin}
-}
 \seealso{
 \code{\link{bar_theme}}, \code{\link{line_theme}}.
 }
-
+\author{
+Christofer \enc{Bäcklin}{Backlin}
+}

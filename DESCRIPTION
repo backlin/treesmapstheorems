@@ -17,6 +17,7 @@ Imports:
     assertthat,
     dplyr,
     ggplot2,
+    grDevices,
     grid
 Suggests:
     gridExtra

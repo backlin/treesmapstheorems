@@ -1,3 +1,4 @@
+#' @importFrom grDevices rgb col2rgb
 col2hex <- function(x){
   do.call(rgb, as.data.frame(t(col2rgb(x))/255))
 }

@@ -87,7 +87,7 @@ tmt_panel <- function(border=TRUE, grid="xy"){
     "panel.grid.major",
     ggplot2::element_line,
     grid,
-    colour = faint_colour,
+    colour = colour("annotation_light"),
     size = thin_line_size
   )
   grid_minor_elements <- list(panel.grid.minor = ggplot2::element_blank())

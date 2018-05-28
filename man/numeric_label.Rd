@@ -53,10 +53,9 @@ data.frame(
   SEK = currency_label(x, prefix = TRUE, currency = "SEK")
 )
 }
-\author{
-Christofer \enc{Bäcklin}{Backlin}
-}
 \seealso{
 \code{\link{quantity_label}}, \code{\link{prefix}}.
 }
-
+\author{
+Christofer \enc{Bäcklin}{Backlin}
+}

@@ -2,9 +2,9 @@
 % Please edit documentation in R/prefix.R
 \docType{data}
 \name{prefix}
+\alias{prefix}
 \alias{metric_prefix}
 \alias{monetary_prefix}
-\alias{prefix}
 \title{Unit prefixes}
 \format{An object of class \code{data.frame} with 17 rows and 2 columns.}
 \usage{
@@ -20,4 +20,3 @@ columns are only used for filtering (see the code of
 \code{link{currency_label}} for an example).
 }
 \keyword{datasets}
-

@@ -25,7 +25,7 @@ tmt_theme <- function(base_size=10, axis.line="xy", axis.text="xy", axis.ticks="
     theme(
       legend.key.size = grid::unit(3, "mm"),
       strip.background = element_blank(),
-      strip.text = element_text(margin = unit(c(4, 1, 1, 1), "mm"), colour = main_colour)
+      strip.text = element_text(margin = unit(c(4, 1, 1, 1), "mm"), colour = colour("annotation_darkdata_light"))
     ) +
     do.call(ggplot2::theme, c(axes, panel, list(...)))
   )
