@@ -30,7 +30,7 @@ p_default <- ggplot(plot_data, aes(x = Language, y = Estimate)) +
 
 p_default +
   coord_flip() +
-  tmt_label(aes(label = Estimate), nudge_y = .3) +
+  #tmt_label(aes(label = Estimate), nudge_y = .3) +
   expand_limits(y = c(0, 6)) +
   bar_theme(orientation = "hor")
 
