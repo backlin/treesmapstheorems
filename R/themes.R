@@ -25,7 +25,7 @@ tmt_theme <- function(base_size=10, axis.line="xy", axis.text="xy", axis.ticks="
     theme(
       legend.key.size = grid::unit(3, "mm"),
       strip.background = element_blank(),
-      strip.text = element_text(margin = unit(c(4, 1, 1, 1), "mm"), colour = colour("annotation_darkdata_light"))
+      strip.text = element_text(margin = unit(c(4, 1, 1, 1), "mm"), colour = colour("annotation_dark"))
     ) +
     do.call(ggplot2::theme, c(axes, panel, list(...)))
   )
@@ -36,7 +36,7 @@ tmt_theme <- function(base_size=10, axis.line="xy", axis.text="xy", axis.ticks="
 #' @param base_size Sent to \code{\link{theme_bw}}.
 #' @param orientation Is it a vertical or horizontal bar plot?
 #' @example examples/bar_plots.R
-#' @seealso \code{\link{line_theme}}.
+#' @seealso \code{\link{tmt_theme}}.
 #' @author Christofer \enc{Bäcklin}{Backlin}
 #' @export
 bar_theme <- function(base_size = 10, orientation=c("vertical", "horizontal")){
@@ -56,7 +56,7 @@ bar_theme <- function(base_size = 10, orientation=c("vertical", "horizontal")){
 #' @param box Whether to draw box or not.
 #' @param grid Which grid lines to draw (xy-string).
 #' @example examples/line_plots.R
-#' @seealso \code{\link{bar_theme}}.
+#' @seealso \code{\link{tmt_theme}}.
 #' @author Christofer \enc{Bäcklin}{Backlin}
 #' @export
 line_theme <- function(base_size = 10, box=FALSE, grid=if(box) "" else "y"){

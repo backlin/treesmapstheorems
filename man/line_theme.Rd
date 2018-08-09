@@ -45,7 +45,7 @@ grid.arrange(
 )
 }
 \seealso{
-\code{\link{bar_theme}}.
+\code{\link{tmt_theme}}.
 }
 \author{
 Christofer \enc{Bäcklin}{Backlin}

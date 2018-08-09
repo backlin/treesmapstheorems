@@ -13,14 +13,17 @@ NULL
 #' @rdname prefix
 metric_prefix <- data.frame(
   symbol = c("a", "f", "p", "n", "\u03BC", "m", "c", "d", "", "da", "h", "k", "M", "G", "T", "P", "E"),
+  base = 10,
   power = c(-6:-1*3L, -2:2, 1:6*3L),
   stringsAsFactors = FALSE
 )
+
 #' @export
 #' @rdname prefix
 monetary_prefix <- data.frame(
   language = rep(c("en", "sv"), c(6, 6)),
   symbol = c("", "k", "m", "bn", "tn", "qn", "", "t", "m", "md", "b", "bd"),
+  base = 10,
   power = c(0:5, 0:5)*3L,
   stringsAsFactors = FALSE
 )

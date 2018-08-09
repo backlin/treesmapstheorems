@@ -6,7 +6,7 @@
 \alias{metric_prefix}
 \alias{monetary_prefix}
 \title{Unit prefixes}
-\format{An object of class \code{data.frame} with 17 rows and 2 columns.}
+\format{An object of class \code{data.frame} with 17 rows and 3 columns.}
 \usage{
 metric_prefix
 
