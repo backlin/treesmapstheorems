@@ -1,11 +1,11 @@
-R-files := $(shell find R -type f)
+source_files := $(shell git ls-files)
 version := $(shell grep -r "Version" DESCRIPTION | cut -c 22-)
 pkg := treesmapstheorems_$(version).tar.gz
 
 build: $(pkg)
 	@echo "Built $<"
 
-$(pkg): $(R-files) render_manual.R
+$(pkg): $(source_files)
 	R -f render_manual.R
 	R CMD build .
 

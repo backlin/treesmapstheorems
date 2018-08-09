@@ -34,6 +34,7 @@ regularly using \code{numeric_label} for a case not covered by the end-user
 functions, please file an issue on GitHub for adding it.
 }
 \examples{
+# Physical quantities
 n <- 12
 x <- 10^rnorm(n, sd = 6) * ifelse(runif(n) < .5, -1, 1)
 

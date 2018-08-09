@@ -16,7 +16,7 @@
 #' @param digits Number of significant digits, sent to \code{\link{signif}}.
 #' @param space Whether to put a space between numeric value and unit.
 #' @examples
-# Physical quantities
+#' # Physical quantities
 #' n <- 12
 #' x <- 10^rnorm(n, sd = 6) * ifelse(runif(n) < .5, -1, 1)
 #' 

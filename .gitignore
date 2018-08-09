@@ -1,5 +1,2 @@
-*.Rhistory
 *.Rcheck
-*.Rdata
 *.tar.gz
-*.swp
